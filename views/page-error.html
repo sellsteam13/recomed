@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("../blocks/modules/head/head.html")
+
+<body>
+
+    <!-- page -->
+    <div class="wrapper">
+
+        <!-- @including header -->
+        @@include("../blocks/modules/header/header.html")
+
+        <!-- page content -->
+        <main class="main">
+
+            <!-- @including error-module -->
+            @@include("../blocks/modules/error/error.html")
+
+        </main>
+
+        <!-- @including footer -->
+        @@include("../blocks/modules/footer/footer.html")
+
+    </div>
+
+    <!-- @including modals -->
+    @@include("../blocks/modules/modals/modals.html")
+
+    <!-- endof page -->
+
+    <!-- connecting scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/vendor.js"></script>
+
+</body>
+
+</html>

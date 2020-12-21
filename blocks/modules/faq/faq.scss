@@ -1,0 +1,75 @@
+.faq {
+    margin: 80px 0;
+    @media (max-width: 1250px) {
+        margin: 60px 0;
+    }
+    @media (max-width: 767px) {
+        margin: 30px 0 40px;
+    }
+    &__title {
+        margin-bottom: 35px;
+        font-size: rem(24);
+        line-height: lh(29, 24);
+        @media (max-width: 1250px) {
+            font-size: rem(18);
+            margin-bottom: 20px;
+        }
+        @media (max-width: 767px) {
+            font-size: rem(16);
+            margin-bottom: 16px;
+        }
+    }
+    &-accordions {
+        &__item {
+            border-bottom: 1px solid #F4F4F4;
+            background-color: none !important;
+            transition: padding-bottom .3s ease-in-out;
+            &.is-opened {
+                padding-bottom: 15px;
+                .faq-accordions__item-header:after {
+                    transform: translate(-25%, -50%) rotate(-90deg);
+                }
+            }
+            &-header {
+                padding: 18px 30px 18px 0;
+                font-weight: 500;
+                font-size: rem(18);
+                line-height: lh(22, 18);
+                position: relative;
+                width: 100%;
+                text-align: left;
+                background-color: none !important;
+                @media (max-width: 1250px) {
+                    font-size: rem(16);
+                }
+                @media (max-width: 767px) {
+                    font-size: rem(14);
+                    padding: 15px 20px 15px 0;
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translate(-25%, -50%) rotate(90deg);
+                    width: 15px;
+                    height: 30px;
+                    background: url('../img/icons/pagination-arrow.svg') no-repeat center;
+                    background-size: 100% 100%;
+                    transition: transform $trans;
+                    @media (max-width: 767px) {
+                        width: 11px;
+                        height: 22px;
+                    }
+                }
+            }
+            &-body {
+                font-size: rem(14);
+                line-height: 140%;
+            }
+            &:first-child {
+                border-top: 1px solid #F4F4F4;
+            }
+        }
+    }
+}

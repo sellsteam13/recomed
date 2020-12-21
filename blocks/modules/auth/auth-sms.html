@@ -1,0 +1,23 @@
+<section class="auth">
+    <div class="auth-wrapper limiter">
+        <div class="auth-form">
+            <h1 class="heading-1 auth-form__title"><span class="is-colored-green">Вход</span> или регистрация</h1>
+            <div class="auth-sms">
+                <form class="auth-sms-tel">
+                    <input type="text" class="def-input is-tel" placeholder="+7 (___) ___-__-__">
+                    <button type="submit" class="def__btn">отправить sms c кодом доступа</button>
+                    <a href="#" class="def__link auth-sms-tel__link">Отправить код повторно</a>
+                </form>
+                <form class="auth-sms-code">
+                    <input type="text" class="def-input" placeholder="Введите код из SMS">
+                    <button type="submit" class="def__btn is-disabled">Войти в личный кабинет</button>
+                </form>
+            </div>
+            <a href="#" class="def__link auth-form__link">Войти / зарегистрироваться при помощи E-mail</a>
+        </div>
+
+        <!-- @including auth-promo -->
+        @@include("./auth-promo/auth-promo.html")
+
+    </div>
+</section>

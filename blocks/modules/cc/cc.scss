@@ -1,0 +1,64 @@
+@import "./cc-heading/cc-heading.scss";
+@import "./cc-gallery/cc-gallery.scss";
+@import "./cc-aside/cc-aside.scss";
+@import "./cc-content/cc-content.scss";
+.cc {
+    margin-bottom: 50px;
+    @media (max-width: 767px) {
+        margin: 10px 0 40px;
+    }
+    &-ntf {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        padding: 15px;
+        background: $white;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        font-weight: 500;
+        font-size: rem(12);
+        line-height: 140%;
+        max-width: 285px;
+        z-index: 1000;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: transform $trans, opacity $trans;
+        &.is-animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+    &-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        @media (max-width: 1250px) {
+            display: block;
+        }
+        .cc-heading,
+        .cc-gallery {
+            width: 100%;
+        }
+        .cc-gallery {
+            @media (max-width: 767px) {
+                width: calc(100% + 20px);
+            }
+        }
+        .cc-content {
+            margin-right: 30px;
+            width: calc(68.5% - 30px);
+            @media (max-width: 1250px) {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+        .aside-order {
+            width: 31.5%;
+            @media (max-width: 1250px) {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("../blocks/modules/head/head.html")
+
+<body>
+
+    <style>
+        ol li {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        ol li:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <!-- page -->
+    <div class="wrapper">
+
+        <!-- @including header -->
+        @@include("../blocks/modules/header/header.html")
+
+        <!-- page content -->
+        <main class="main" style="padding: 50px 0">
+            <div class="limiter">
+                <h2 style="margin-bottom: 30px;">Список страниц</h2>
+                <ol>
+                    <li><a class="unstyled" href="page-main.html">Главная</a></li>
+                    <li><a class="unstyled" href="page-catalog.html">Каталог</a></li>
+                    <li><a class="unstyled" href="page-catalog-with-programms.html">Каталог w/ programms</a></li>
+                    <li><a class="unstyled" href="page-countries.html">Поиск по странам</a></li>
+                    <li><a class="unstyled" href="page-healing.html">Лечение</a></li>
+                    <li><a class="unstyled" href="page-cc.html">Клиника</a></li>
+                    <li><a class="unstyled" href="page-doctors.html">Наши врачи</a></li>
+                    <li><a class="unstyled" href="page-cv.html">Страница доктора</a></li>
+                    <li><a class="unstyled" href="page-about.html">О нас</a></li>
+                    <li><a class="unstyled" href="page-blog.html">Блог</a></li>
+                    <li><a class="unstyled" href="page-article.html">Запись в блоге</a></li>
+                    <li><a class="unstyled" href="page-contacts.html">Контакты</a></li>
+                    <li><a class="unstyled" href="page-auth-sms.html">Вход/Рег с помощью sms</a></li>
+                    <li><a class="unstyled" href="page-auth-def.html">Вход/Рег с помощью email</a></li>
+                    <li><a class="unstyled" href="page-auth-def-sended.html">Вход/Рег с помощью email State: отправлено</a></li>
+                    <li><a class="unstyled" href="page-auth-more.html">Вход/Рег доп данные</a></li>
+                    <li><a class="unstyled" href="page-user.html">Личный кабинет</a></li>
+                    <li><a class="unstyled" href="page-error.html">404</a></li>
+                    <li><button onclick="openModal(document.querySelector('.modal-programm'))">Модалка программы</button></li>
+                    <li><button onclick="openModal(document.querySelector('.modal-feedback'))">Review form</button></li>
+                    <li><button onclick="openModal(document.querySelector('.modal-search'))">Call order form</button></li>
+                    <li><button onclick="openModal(document.querySelector('.modal-doc'))">doc form</button></li>
+                    <li><button onclick="openModal(document.querySelector('.modal-clinic'))">clinic form</button></li>
+                    <li><button onclick="openModal(document.querySelector('.modal-edit'))">popup LK</button></li>
+                    <li><button onclick="openModal(document.querySelector('.modal-unit'))">united form</button></li>
+                    <li><button onclick="openModal(document.querySelector('.modal-upload'))">scan popup</button></li>
+                    <li><button onclick="openModal(document.querySelector('.modal-message'))">message modal</button></li>
+                </ol>
+            </div>
+        </main>
+
+        <!-- @including footer -->
+        @@include("../blocks/modules/footer/footer.html")
+
+    </div>
+
+    <!-- @including modals -->
+    @@include("../blocks/modules/modals/modals.html")
+
+    <!-- endof page -->
+
+    <!-- connecting scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/vendor.js"></script>
+
+</body>
+
+</html>

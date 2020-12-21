@@ -1,0 +1,19 @@
+<section class="auth">
+    <div class="auth-wrapper limiter">
+        <div class="auth-form">
+            <h1 class="heading-1 auth-form__title"><span class="is-colored-green">Вход</span> или регистрация</h1>
+            <form class="auth-def">
+                <div class="auth-def__note">
+                    На ваш email <span class="is-colored-green">victorivanov@yandex.ru</span> отправлено письмо с кодом подтверждения.
+                </div>
+                <input type="text" class="def-input" placeholder="Пароль">
+                <button type="submit" class="def__btn">Войти в личный кабинет</button>
+            </form>
+            <a href="#" class="def__link auth-form__link">Войти / зарегистрироваться при помощи E-mail</a>
+        </div>
+
+        <!-- @including auth-promo -->
+        @@include("./auth-promo/auth-promo.html")
+
+    </div>
+</section>

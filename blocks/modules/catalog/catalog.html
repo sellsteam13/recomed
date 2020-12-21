@@ -1,0 +1,34 @@
+<section class="catalog">
+    <div class="catalog-wrapper limiter">
+
+        <!-- @including catalog-mobile -->
+        @@include("./catalog-mobile/catalog-mobile.html")
+
+        <!-- @including catalog-heading -->
+        @@include("./catalog-heading/catalog-heading.html")
+
+        <div class="catalog-heading-manage">
+            <button class="def__btn def__btn--green catalog-heading-manage__btn">
+                <img src="assets/img/icons/filter.svg" alt="filter-icon">
+                <span>Фильтрация</span>
+            </button>
+        </div>
+
+        <!-- @including catalog-aside-filter -->
+        @@include("./catalog-filter/catalog-filter.html")
+
+        <!-- @including catalog-list -->
+        @@include("./catalog-list/catalog-list.html")
+
+    </div>
+</section>
+
+<nav class="bar-nav">
+    <div class="bar-nav-wrapper limiter">
+        <a href="#" class="unstyled" data-scroll="#catalogList">Клиники</a>
+        <a href="#" class="unstyled" data-scroll=".more">Цены</a>
+        <a href="#" class="unstyled" data-scroll="#doctors">врачи</a>
+        <a href="#" class="unstyled" data-scroll="#faq">подробнее</a>
+        <a href="#" class="unstyled" data-scroll="#feedback">отзывы</a>
+    </div>
+</nav>

@@ -1,0 +1,148 @@
+.question {
+    margin: 0 0 165px;
+    @media (max-width: 1250px) {
+        margin-bottom: 50px;
+    }
+    &-inner {
+        padding: 40px 0 30px 105px;
+        display: flex;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        position: relative;
+        @media (max-width: 1250px) {
+            padding: 262px 30px 30px;
+            overflow: hidden;
+        }
+        @media (max-width: 767px) {
+            padding: 242px 15px 20px;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            width: 594px;
+            background: url('../img/illstr/question/question-illstr.png') no-repeat center top;
+            background-size: cover;
+            @media (max-width: 1250px) {
+                width: 100%;
+                top: -10px;
+                left: 0;
+                right: 0;
+                height: 242px;
+                bottom: auto;
+                border-radius: 10px 10px 0 0;
+                background-image: url('../img/illstr/question/question-illstr-mobile.png');
+                background-position: center 10px;
+            }
+            @media (max-width: 767px) {
+                height: 234px;
+            }
+        }
+    }
+    &-form {
+        width: 386px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        @media (max-width: 1250px) {
+            width: 100%;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        &__title {
+            font-weight: bold;
+            font-size: rem(22);
+            line-height: lh(27, 22);
+            margin-bottom: 14px;
+            @media (max-width: 1250px) {
+                margin-bottom: 20px;
+                text-align: center;
+                width: 100%;
+            }
+            @media (max-width: 767px) {
+                font-size: rem(16);
+                margin-bottom: 16px;
+            }
+        }
+        .def-input,
+        .iti {
+            width: 100%;
+            margin-bottom: 15px;
+            @media (max-width: 1250px) {
+                width: calc(50% - 10px);
+            }
+            @media (max-width: 767px) {
+                width: 100%;
+            }
+            .iti__arrow {
+                display: none;
+            }
+            .iti__selected-flag {
+                padding: 0 10px 0 11px;
+                border-radius: 10px 0 0 10px;
+            }
+        }
+        .iti .def-input {
+            @media (max-width: 1250px) {
+                width: 100%;
+            }
+        }
+        .iti--allow-dropdown input,
+        .iti--allow-dropdown input[type=text],
+        .iti--allow-dropdown input[type=tel],
+        .iti--separate-dial-code input,
+        .iti--separate-dial-code input[type=text],
+        .iti--separate-dial-code input[type=tel] {
+            padding-left: 40px;
+        }
+        .iti__country-list {
+            width: 386px;
+        }
+        textarea {
+            margin-bottom: 25px;
+            @media (max-width: 1250px) {
+                &.def-input {
+                    width: 100%;
+                }
+            }
+        }
+        button {
+            width: 100%;
+            margin-bottom: 12px;
+            @media (max-width: 1250px) {
+                width: 250px;
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+            @media (max-width: 767px) {
+                width: 300px;
+                max-width: 100%;
+                margin: 0 auto;
+                height: 40px;
+                font-size: rem(12);
+            }
+        }
+        &__note {
+            font-weight: 500;
+            font-size: rem(14);
+            line-height: 140%;
+            color: #B4B4B4;
+            @media (max-width: 1250px) {
+                width: calc(100% - 270px);
+                font-size: rem(12);
+                text-align: left;
+            }
+            @media (max-width: 767px) {
+                width: 100%;
+                margin-top: 14px;
+                font-size: rem(10);
+                text-align: center;
+            }
+        }
+    }
+}

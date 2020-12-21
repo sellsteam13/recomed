@@ -1,0 +1,20 @@
+<section class="auth">
+    <div class="auth-wrapper limiter">
+        <div class="auth-form">
+            <form class="auth-more">
+                <div class="auth-more__title">Электронная карта пациента</div>
+                <input type="text" class="def-input" placeholder="Имя и фамилия:">
+                <input type="text" class="def-input" placeholder="Дата рождения">
+                <input type="text" class="def-input is-tel" placeholder="+7 (___) ___-__-__">
+                <input type="text" class="def-input" placeholder="Ваш email:">
+                <input type="text" class="def-input" placeholder="Ваш город">
+                <button type="submit" class="def__btn">в личный кабинет</button>
+                <a href="#" class="auth-more__link unstyled">Политика обработки персональных данных</a>
+            </form>
+        </div>
+
+        <!-- @including auth-promo -->
+        @@include("./auth-promo/auth-promo.html")
+
+    </div>
+</section>

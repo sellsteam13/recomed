@@ -1,0 +1,41 @@
+@import "catalog-heading/catalog-heading";
+@import "catalog-filter/catalog-filter";
+@import "catalog-list/catalog-list";
+@import "catalog-adv/catalog-adv";
+@import "catalog-promo/catalog-promo";
+@import "catalog-order/catalog-order";
+@import "catalog-pagination/catalog-pagination";
+@import "catalog-programs/catalog-programms";
+@import "catalog-mobile/catalog-mobile";
+.catalog {
+    margin-bottom: 80px;
+    @media (max-width: 767px) {
+        margin-bottom: 30px;
+    }
+    &-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        .catalog-heading {
+            width: 100%;
+            margin-bottom: 30px;
+            @media (max-width: 1250px) {
+                margin-bottom: 0;
+            }
+        }
+        .catalog-filter {
+            width: 260px;
+            margin-right: 50px;
+            @media (max-width: 1250px) {
+                margin-right: 0;
+                width: 100%;
+            }
+        }
+        .catalog-list {
+            width: calc(100% - 310px);
+            @media (max-width: 1250px) {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,91 @@
+.unstyled {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: unset;
+    background: unset;
+    padding: unset;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+}
+
+.def__btn {
+    border: 2px solid transparent;
+    height: 45px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: fit-content;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: rem(14);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: filter $trans;
+    &:hover {
+        filter: brightness(.9);
+    }
+    &:focus,
+    &:active {
+        filter: brightness(1.2);
+    }
+    &--purple {
+        border-color: $purple;
+        color: $purple;
+    }
+    &--green {
+        color: $green;
+        border-color: $green;
+    }
+    &--red {
+        color: $red;
+        border-color: $red;
+    }
+}
+
+.big__btn {
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: $green;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: rem(16);
+    text-transform: uppercase;
+    color: $white;
+    text-decoration: none;
+    transition: background-color $trans;
+    &:hover {
+        background: #63A83B;
+    }
+    &:active,
+    &:focus {
+        background: #83DF4D;
+    }
+}
+
+.def__link {
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: 140%;
+    text-decoration-skip-ink: none;
+    color: $green;
+    transition: opacity $trans;
+    &:hover {
+        opacity: .8;
+    }
+}
+
+.def__btn.is-disabled,
+.big__btn.is-disabled {
+    background-color: #ECECEC;
+    color: $white;
+    pointer-events: none;
+}

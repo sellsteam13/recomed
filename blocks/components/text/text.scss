@@ -1,0 +1,83 @@
+/** headings */
+
+// h1,
+// .heading-1 {
+//     font-size: rem(49);
+// }
+// h3,
+// .heading-3 {
+//     font-size: rem(28);
+// }
+// h4,
+// .heading-4 {
+//     font-size: rem(16);
+// }
+// h5,
+// .heading-5 {
+//     font-size: rem(16);
+// }
+h1,
+.heading-1,
+h2,
+.heading-2,
+h3,
+.heading-3,
+h4,
+.heading-4,
+h5,
+.heading-5 {
+    font-size: inherit;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+.heading-1,
+h2,
+.heading-2 {
+    font-weight: bold;
+    font-size: rem(36);
+    line-height: lh(44, 36);
+    @media (max-width: 1250px) {
+        font-size: rem(28);
+        line-height: lh(34, 28);
+    }
+    @media (max-width: 767px) {
+        font-size: rem(22);
+        line-height: lh(27, 22);
+    }
+}
+
+
+/** paragraphs */
+
+p {
+    margin: 0;
+    font-size: rem(16);
+    line-height: 140%;
+    @media (max-width: 1250px) {
+        font-size: rem(14);
+    }
+    @media (max-width: 767px) {
+        font-size: rem(12);
+    }
+    +p {
+        margin-top: 15px;
+        @media (max-width: 1250px) {
+            margin-top: 10px;
+        }
+    }
+}
+
+
+/** text colors */
+
+.is-colored {
+    &-green {
+        color: $green !important;
+    }
+    &-purple {
+        color: $purple !important;
+    }
+}

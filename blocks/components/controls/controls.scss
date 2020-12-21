@@ -1,0 +1,188 @@
+.tip {
+    position: absolute;
+    z-index: 5;
+    border-radius: 10px;
+    border: 1px solid #71BF44;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+    background-color: $white;
+    width: max-content;
+    padding: 15px;
+    font-weight: 600;
+    font-size: rem(12);
+    line-height: 140%;
+    color: $black;
+    top: calc(100% + 20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity $trans;
+    @media (max-width: 767px) {
+        display: none !important;
+    }
+    &--right {
+        right: 0;
+        &:before {
+            right: 16px;
+        }
+        &:after {
+            right: 15px;
+        }
+    }
+    &--left {
+        left: 0;
+        &:before {
+            left: 16px;
+        }
+        &:after {
+            left: 15px;
+        }
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        width: 19px;
+        height: 10px;
+        background: url('../img/icons/tip-triangle.svg') no-repeat center;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        top: -1px;
+        height: 2px;
+        width: 17px;
+        border-radius: 2px 2px 0 0;
+        background-color: $white;
+        z-index: 1;
+    }
+}
+
+[data-expander] {
+    [data-expander-header] {
+        cursor: pointer;
+        user-select: none;
+        &.is-disabled {
+            pointer-events: none;
+        }
+    }
+    [data-expander-body] {
+        overflow: hidden;
+        transition: height .3s ease-in-out;
+    }
+}
+
+.swiper-scrollbar {
+    width: 100%;
+    background: #F2F2F2;
+    border-radius: 4px;
+    height: 8px;
+    margin-top: 20px;
+    @media (max-width: 767px) {
+        height: 6px;
+    }
+    &-drag {
+        background: #E1E1E1;
+        border-radius: 4px;
+        height: 8px;
+        cursor: pointer;
+    }
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    &__item {
+        margin: 0 0 10px 0;
+        position: relative;
+        font-size: rem(14);
+        color: #6A6A6A;
+        text-decoration-color: transparent;
+        transition: text-decoration-color $trans;
+        @media (max-width: 767px) {
+            font-size: rem(12);
+        }
+        &:hover {
+            text-decoration-color: #6a6a6a;
+        }
+        &:last-child {
+            pointer-events: none;
+            font-weight: 600;
+            color: $green;
+            text-decoration: none;
+        }
+        +* {
+            margin-left: 65px;
+            @media (max-width: 767px) {
+                margin-left: 45px;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: calc(100% + 30px);
+                transform: translateY(-50%);
+                width: 7px;
+                height: 10px;
+                background: url('../img/icons/right-arrow.svg') no-repeat center;
+                background-size: 100% 100%;
+                @media (max-width: 767px) {
+                    right: calc(100% + 18px);
+                }
+            }
+        }
+    }
+}
+
+.bar {
+    &-nav {
+        position: fixed;
+        z-index: 9000;
+        top: 76px;
+        left: 0;
+        right: 0;
+        height: 55px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity $trans;
+        @media (max-width: 1250px) {
+            top: 142px;
+            height: 34px;
+        }
+        @media (max-width: 767px) {
+            top: 49px;
+            height: auto;
+            padding: 10px 0 13px;
+            border-top: 1px solid #f4f4f4;
+        }
+        &.is-scrolling {
+            opacity: 1;
+            pointer-events: all;
+        }
+        &-wrapper {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @media (max-width: 1250px) {
+                align-items: flex-start;
+            }
+            >a {
+                font-size: rem(15);
+                text-transform: uppercase;
+                color: #6A6A6A;
+                transition: color $trans;
+                @media (max-width: 767px) {
+                    font-size: rem(11);
+                    &:nth-child(n+5) {
+                        display: none;
+                    }
+                }
+                &:hover {
+                    color: $black;
+                }
+            }
+        }
+    }
+}

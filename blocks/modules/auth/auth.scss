@@ -1,0 +1,174 @@
+@import "./auth-promo/auth-promo.scss";
+.auth {
+    padding: 93px 0 170px;
+    @media (max-width: 1250px) {
+        padding: 50px 0 90px;
+    }
+    @media (max-width: 767px) {
+        padding: 87px 0;
+        min-height: calc(100vh - 50px);
+    }
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        @media (max-width: 1250px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &-form {
+        width: cw(386, 1220);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (max-width: 1250px) {
+            margin-bottom: 100px;
+            width: 386px;
+        }
+        @media (max-width: 767px) {
+            width: 100%;
+            margin-bottom: 0;
+            max-width: 386px;
+        }
+        &__title {
+            text-align: center;
+            margin-bottom: 60px;
+            @media (max-width: 1250px) {
+                margin-bottom: 48px;
+            }
+            @media (max-width: 767px) {
+                margin-bottom: 20px;
+            }
+        }
+        &__link {
+            text-align: center;
+            margin-top: 55px;
+            @media (max-width: 767px) {
+                margin-top: 20px;
+            }
+        }
+        input,
+        button,
+        .iti {
+            width: 100%;
+        }
+        input,
+        .iti {
+            margin-bottom: 13px;
+        }
+        .def__btn:not(.is-disabled) {
+            background-color: $green;
+            color: $white;
+        }
+        .def-input {
+            height: 45px;
+            @media (max-width: 767px) {
+                height: 40px;
+            }
+        }
+        .def__btn {
+            @media (max-width: 767px) {
+                font-size: rem(12);
+                height: 40px;
+            }
+        }
+    }
+    &-sms {
+        &-tel {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #F4F4F4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @media (max-width: 767px) {
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+            }
+            &__link {
+                margin-top: 10px;
+            }
+        }
+    }
+    &-def {
+        margin-top: 35px;
+        @media (max-width: 767px) {
+            margin-top: 0;
+        }
+        button[type="submit"],
+        .def__btn {
+            margin-top: 27px;
+            @media (max-width: 767px) {
+                margin-top: 15px;
+            }
+        }
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 64px;
+            height: 1px;
+            left: 0;
+            right: 0;
+            background-color: #F4F4F4;
+            @media (max-width: 767px) {
+                bottom: 52px;
+            }
+        }
+        &__note {
+            margin-bottom: 25px;
+            width: 100%;
+            text-align: center;
+            font-size: rem(14);
+            line-height: 140%;
+            @media (max-width: 767px) {
+                margin-bottom: 15px;
+                font-size: rem(12);
+            }
+            span {
+                font-weight: 600;
+            }
+        }
+    }
+    &-more {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        &__title {
+            margin-bottom: 20px;
+            padding-bottom: 24px;
+            font-weight: bold;
+            font-size: rem(20);
+            line-height: lh(24, 20);
+            text-align: center;
+            width: 100%;
+            border-bottom: 1px solid #F4F4F4;
+        }
+        &__link {
+            margin: 16px auto 0;
+            font-weight: 500;
+            font-size: rem(14);
+            line-height: 140%;
+            text-align: center;
+            color: $green;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        >button[type="submit"] {
+            position: relative;
+            margin-top: 32px;
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: calc(100% + 25px);
+                height: 1px;
+                background-color: #F4F4F4;
+            }
+        }
+    }
+}

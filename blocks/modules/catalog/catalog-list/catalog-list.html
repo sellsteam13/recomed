@@ -1,0 +1,76 @@
+<div class="catalog-list" id="catalogList">
+
+    <div class="catalog-list-triggers">
+        <a href="#faq" class="unstyled catalog-list-triggers__item is-highlighted" data-scroll="#faq">
+            Ответы на вопросы
+        </a>
+        <a href="#feedback" class="unstyled catalog-list-triggers__item" data-scroll="#feedback">
+            Отзывы на клиники
+        </a>
+        <a href="#doctors" class="unstyled catalog-list-triggers__item" data-scroll="#doctors">
+            Консультации докторов
+        </a>
+    </div>
+
+    <div class="catalog-list__note">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.80021 7.2002H7.2002V12.0002H8.80021V7.2002Z" fill="#6A6A6A"/>
+            <path d="M7.99998 0C3.58001 0 0 3.58001 0 7.99998C0 12.42 3.58001 16 7.99998 16C12.42 16 16 12.42 16 7.99998C16 3.57997 12.42 0 7.99998 0ZM7.99998 14.4C4.47198 14.4 1.59997 11.528 1.59997 7.99998C1.59997 4.47198 4.47198 1.60001 7.99998 1.60001C11.528 1.60001 14.4 4.47198 14.4 7.99998C14.4 11.528 11.528 14.4 7.99998 14.4Z" fill="#6A6A6A"/>
+            <path d="M8.80021 4H7.2002V5.60001H8.80021V4Z" fill="#6A6A6A"/>
+        </svg>
+        <span>Рейтинг основан на 400 обращаниях 400 обращаниях 400 обращаниях 400 обращаниях</span>
+    </div>
+
+    <div class="catalog-list-cards">
+
+        <!-- @including favorite-card -->
+        @@include("./card/card-favorite.html")
+
+    </div>
+
+    <!-- @including catalog-adv module -->
+    @@include("../catalog-adv/catalog-adv.html")
+
+    <div class="catalog-list-cards">
+
+        <!-- @including default-card -->
+        @@include("./card/card.html")
+
+        <!-- @including default-card -->
+        @@include("./card/card.html")
+
+        <!-- @including default-card -->
+        @@include("./card/card.html")
+
+    </div>
+
+    <!-- @including catalog-promo module -->
+    @@include("../catalog-promo/catalog-promo.html")
+
+    <div class="catalog-list-cards">
+
+        <!-- @including default-card -->
+        @@include("./card/card.html")
+
+        <!-- @including default-card -->
+        @@include("./card/card.html")
+
+    </div>
+
+    <!-- @including catalog-order module -->
+    @@include("../catalog-order/catalog-order.html")
+
+    <div class="catalog-list-cards">
+
+        <!-- @including default-card -->
+        @@include("./card/card.html")
+
+        <!-- @including default-card -->
+        @@include("./card/card.html")
+
+    </div>
+
+    <!-- @including catalog-pagination module -->
+    @@include("../catalog-pagination/catalog-pagination.html")
+
+</div>
